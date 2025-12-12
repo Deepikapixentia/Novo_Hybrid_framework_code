@@ -39,15 +39,15 @@ public class GAdmin_HomePage extends BasePage {
 	}
 
 	public void clicOnHomeTab() {
-		
-		try {
-			Thread.sleep(8000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+	
 		if (!getTitle().equalsIgnoreCase("Home")) {
 			wait.until(ExpectedConditions.elementToBeClickable(homebutton));
 			
+			try {
+				Thread.sleep(8000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 			click(homebutton);
 		}
 	}
